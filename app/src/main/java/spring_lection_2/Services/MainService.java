@@ -3,15 +3,15 @@ package spring_lection_2.Services;
 import org.springframework.stereotype.Service;
 
 import spring_lection_2.Model.RequestDTO;
+import spring_lection_2.Model.ResponseDTO;
 
 @Service
 public class MainService {
     
-    public RequestDTO first(int a,int b,String data){
-        RequestDTO user = new RequestDTO();
-        user.setA(a + 10);
-        user.setB(b + 20);
-        user.setData( data + " setted");
+    public ResponseDTO first(RequestDTO info){
+        ResponseDTO user = new ResponseDTO();
+        user.setSum(info.getA() + info.getB());
+        user.setData(info.getData() + " setted");
         return user;
     }
 }

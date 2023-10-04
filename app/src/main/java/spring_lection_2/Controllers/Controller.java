@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import spring_lection_2.Model.RequestDTO;
+import spring_lection_2.Model.ResponseDTO;
 import spring_lection_2.Services.MainService;
 
 @RestController
@@ -26,8 +27,8 @@ public class Controller {
     private MainService service;
 
     @RequestMapping(value = "/get",method = RequestMethod.POST , produces = MediaType.APPLICATION_JSON_VALUE)
-    public RequestDTO getData(@RequestBody RequestDTO user){
-        return service.first(user.getA() ,user.getB(),user.getData());
+    public ResponseDTO getData(@RequestBody RequestDTO user){
+        return service.first(user);
     }
     
     @GetMapping("/stop")
