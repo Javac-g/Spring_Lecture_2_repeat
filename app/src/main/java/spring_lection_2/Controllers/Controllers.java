@@ -24,7 +24,7 @@ import spring_lection_2.Model.ResponseDTO;
 import spring_lection_2.Services.MainService;
 
 @Controller
-@RequestMapping("/Test")
+@RequestMapping("/app")
 public class Controllers {
     
     @Autowired
@@ -49,7 +49,7 @@ public class Controllers {
         return service.update(id, info);
     }
 
-    @DeleteMapping(value = "/find",produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping(value = "/delete",produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseDTO deleteData(@RequestParam Integer id){
         return service.delete(id);
