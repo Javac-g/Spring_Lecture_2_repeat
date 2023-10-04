@@ -1,26 +1,44 @@
 package spring_lection_2.Model;
+import java.util.*;
 
 public class RequestDTO {
-    private int a;
-    private int b;
-    private String data;
+    private Integer id;
+    private String first_name;
+    private String last_name;
+    private List<Exp> expirience = new ArrayList<>();
+    private Tool tool;
 
-    public int getA() {
-        return a;
+    public Tool getTool() {
+        return tool;
     }
-    public int getB() {
-        return b;
+    public void setTool(Tool tool) {
+        this.tool = tool;
     }
-    public String getData() {
-        return data;
+
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
-    public void setA(int a) {
-        this.a = a;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
-    public void setB(int b) {
-        this.b = b;
+
+    public void setId(Integer id) {
+        this.id = id;
     }
-    public void setData(String data) {
-        this.data = data;
+    public String getLast_name() {
+        return last_name;
     }
+    public String getFirst_name() {
+        return first_name;
+    }
+    public Integer getId() {
+        return id;
+    }
+    public List<Exp> getExpirience() {
+        return expirience;
+    }
+    public void setExpirience(List<Exp> expirience) {
+        this.expirience = expirience;
+    }
+
 }

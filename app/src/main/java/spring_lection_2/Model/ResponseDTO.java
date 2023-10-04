@@ -1,19 +1,42 @@
 package spring_lection_2.Model;
 
 public class ResponseDTO {
-    private int sum;
-    private String data;
+    private Integer id;
+    private String first_name;
+    private String last_name;
+    private Position position;
+    private Tool tool;
 
-    public String getData() {
-        return data;
+    public void setTool(Tool tool) {
+        this.tool = tool;
     }
-    public int getSum() {
-        return sum;
+    public Tool getTool() {
+        return tool;
     }
-    public void setData(String data) {
-        this.data = data;
+
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
-    public void setSum(int sum) {
-        this.sum = sum;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    public String getLast_name() {
+        return last_name;
+    }
+    public String getFirst_name() {
+        return first_name;
+    }
+    public Integer getId() {
+        return id;
+    }
+    public Position getPosition() {
+        return position;
+    }
+    public void setPosition(Position position) {
+        this.position = position;
     }
 }
