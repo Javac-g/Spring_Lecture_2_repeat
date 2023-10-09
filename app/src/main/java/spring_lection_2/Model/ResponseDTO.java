@@ -1,5 +1,7 @@
 package spring_lection_2.Model;
 
+import java.util.Objects;
+
 public class ResponseDTO {
     private Integer id;
     private String first_name;
@@ -38,5 +40,33 @@ public class ResponseDTO {
     }
     public void setPosition(Position position) {
         this.position = position;
+    }
+
+    @Override
+    public String toString(){
+        return "\nName: " + first_name + " " + last_name + "\nID: " + id + "\nPosition: " + position;
+    }
+    @Override
+    public boolean equals(Object ob){
+        if(this == ob){
+            return true;
+        }
+        if(ob == null || getClass() != ob.getClass()){
+            return false;
+        }
+        ResponseDTO user = (ResponseDTO)ob;
+        return Objects.equals(first_name, user.getFirst_name()) 
+                    && Objects.equals(getLast_name(),user.getLast_name())
+                    && Objects.equals(id, user.getId())
+                    && Objects.equals(tool, user.getTool());
+    }
+    @Override
+    public int hashCode(){
+        int hash = 5;
+        hash = hash * 3 + Objects.hashCode(first_name);
+        hash = hash * 3 + Objects.hashCode(last_name);
+        hash = hash * 3 + Objects.hashCode(id);
+        hash = hash * 3 + Objects.hashCode(tool);
+        return hash;
     }
 }
