@@ -47,12 +47,16 @@ public class MainService {
         switch(max){
             case 50:
                 user.setPosition(Position.JUNIOR);
+                break;
             case 70:
                 user.setPosition(Position.MIDDLE); 
+                break;
             case 90:
                 user.setPosition(Position.SENIOR);
+                break;
             case 100:
-                user.setPosition(Position.LEAD);          
+                user.setPosition(Position.LEAD);    
+                break;      
 
         }
     }
