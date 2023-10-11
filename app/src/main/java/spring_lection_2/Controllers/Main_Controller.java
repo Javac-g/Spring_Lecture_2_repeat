@@ -26,10 +26,10 @@ public class Main_Controller {
     
     private MainService service;
 
-
-    public void setService(MainService service) {
+    public Main_Controller(MainService service){
         this.service = service;
     }
+
 
     @PostMapping(value = "/add", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
