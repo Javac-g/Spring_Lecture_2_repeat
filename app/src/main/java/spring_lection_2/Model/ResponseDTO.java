@@ -76,7 +76,8 @@ public class ResponseDTO {
         return Objects.equals(first_name, user.getFirst_name()) 
                     && Objects.equals(getLast_name(),user.getLast_name())
                     && Objects.equals(id, user.getId())
-                    && Objects.equals(tool, user.getTool());
+                    && Objects.equals(first_tool, user.getFirst_tool())
+                    && Objects.equals(second_tool, user.getSecond_tool());
     }
     @Override
     public int hashCode(){
@@ -84,7 +85,8 @@ public class ResponseDTO {
         hash = hash * 3 + Objects.hashCode(first_name);
         hash = hash * 3 + Objects.hashCode(last_name);
         hash = hash * 3 + Objects.hashCode(id);
-        hash = hash * 3 + Objects.hashCode(tool);
+        hash = hash * 3 + Objects.hashCode(first_tool);
+        hash = hash * 3 + Objects.hashCode(second_tool);
         return hash;
     }
 }
