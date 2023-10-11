@@ -1,9 +1,8 @@
 package spring_lection_2.Controllers;
 
 
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -62,12 +61,5 @@ public class Main_Controller {
     public void stopService(){
         ((ConfigurableApplicationContext) context).close();
     }
-    @PreDestroy
-    public void stop(){
-
-    }
-    @PostConstruct
-    public void start(){
-
-    }
+    
 }
