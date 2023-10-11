@@ -28,7 +28,7 @@ public class MainService {
             throw new IllegalArgumentException();
         }
         byte[] data = ("\nType" + type + "\nName: " + user.getFirst_name() + " / " + user.getLast_name()).getBytes();
-        try(FileOutputStream fileOutputStream = new FileOutputStream("log.dat");
+        try(FileOutputStream fileOutputStream = new FileOutputStream("log.dat",true);
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             DataOutputStream dataOutputStream = new DataOutputStream(fileOutputStream)){
 
