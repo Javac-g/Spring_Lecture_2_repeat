@@ -7,14 +7,32 @@ public class ResponseDTO {
     private String first_name;
     private String last_name;
     private Position position;
-    private Tool tool;
+    private String first_tool,second_tool;
+    private Car car;
 
-    public void setTool(Tool tool) {
-        this.tool = tool;
+    public Car getCar() {
+        return car;
     }
-    public Tool getTool() {
-        return tool;
+    public void setCar(Car car) {
+        this.car = car;
     }
+
+    public String getFirst_tool() {
+        return first_tool;
+    }
+    
+    public void setFirst_tool(String first_tool) {
+        this.first_tool = first_tool;
+    }
+    public String getSecond_tool() {
+        return second_tool;
+    }
+    public void setSecond_tool(String second_tool) {
+        this.second_tool = second_tool;
+    }
+    
+
+   
 
     public void setFirst_name(String first_name) {
         this.first_name = first_name;

@@ -65,7 +65,9 @@ public class MainService {
         user.setLast_name(info.getLast_name());
         user.setFirst_name(info.getFirst_name());
         user.setId(info.getId());
-        user.setTool(info.getTool());
+        user.setFirst_tool("First tool: " + info.getTool().getFirst());
+        user.setSecond_tool("Second tool: " + info.getTool().getSecond());
+        user.setCar(info.getCar());
         setPosition(user, info);
         database.add(user);
         log("Created: ", user);
@@ -87,7 +89,9 @@ public class MainService {
             searchUser.setFirst_name(info.getFirst_name());
             searchUser.setLast_name(info.getLast_name());
             searchUser.setId(info.getId());
-            searchUser.setTool(info.getTool());
+            searchUser.setFirst_tool("First tool: " + info.getTool().getFirst());
+            searchUser.setSecond_tool("Second tool: " + info.getTool().getSecond());
+            searchUser.setCar(info.getCar());
             setPosition(searchUser, info);
             log("Updated: ", searchUser);
             return searchUser;

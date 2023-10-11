@@ -7,6 +7,13 @@ public class RequestDTO {
     private String last_name;
     private List<Exp> expirience = new ArrayList<>();
     private Tool tool;
+    private Car car;
+    public void setCar(Car car) {
+        this.car = car;
+    }
+    public Car getCar() {
+        return car;
+    }
 
     public Tool getTool() {
         return tool;
