@@ -13,7 +13,7 @@ import spring_lection_2.Services.SideService;
 public class SpringConfigurationFactory {
     
     @Bean
-    public MainService serviceBean(){
+    public MainService mainServiceBean(){
         return new MainService();
     }
 
@@ -29,7 +29,7 @@ public class SpringConfigurationFactory {
     }
     @Bean
     public Main_Controller controllerBean(){
-        return new Main_Controller(serviceBean());
+        return new Main_Controller(mainServiceBean());
     }
 
     
