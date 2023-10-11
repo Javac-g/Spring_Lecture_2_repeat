@@ -2,8 +2,6 @@ package spring_lection_2.Services;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import spring_lection_2.Model.Exp;
 import spring_lection_2.Model.Position;
 import spring_lection_2.Model.RequestDTO;
@@ -14,7 +12,7 @@ import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.util.*;
 
-@Service
+
 public class MainService {
     private final List<ResponseDTO> database = new ArrayList<>();
     private Comparator<Exp> rule = new Comparator<>(){

@@ -9,22 +9,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.*;
 
 import spring_lection_2.Model.RequestDTO;
 import spring_lection_2.Model.ResponseDTO;
 import spring_lection_2.Services.MainService;
 
-@Controller
+
 @RequestMapping("/app")
-public class Controllers {
+public class Main_Controller {
     
     @Autowired
     private ApplicationContext context;
 
-    @Autowired
+    
     private MainService service;
+
+
+    public void setService(MainService service) {
+        this.service = service;
+    }
 
     @PostMapping(value = "/add", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
