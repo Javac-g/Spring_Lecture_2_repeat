@@ -30,6 +30,7 @@ public class SpringConfigurationFactory {
         return controller;
     }
     @Bean(name = "Main_Controller")
+    @Scope(value = "prototype")
     public Main_Controller controllerBean(){
         return new Main_Controller(mainServiceBean());
     }
