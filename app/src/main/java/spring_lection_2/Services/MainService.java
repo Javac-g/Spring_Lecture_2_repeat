@@ -15,6 +15,7 @@ import java.util.*;
 
 public class MainService {
     private final List<ResponseDTO> database = new ArrayList<>();
+    
     private Comparator<Exp> rule = new Comparator<>(){
         @Override
         public int compare(Exp a,Exp b){
