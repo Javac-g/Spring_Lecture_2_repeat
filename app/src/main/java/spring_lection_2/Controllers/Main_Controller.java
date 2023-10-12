@@ -1,8 +1,8 @@
 package spring_lection_2.Controllers;
 
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -16,7 +16,7 @@ import spring_lection_2.Model.ResponseDTO;
 import spring_lection_2.Services.MainService;
 
 
-@RequestMapping("/app")
+@RequestMapping("/main")
 public class Main_Controller {
     
     @Autowired
