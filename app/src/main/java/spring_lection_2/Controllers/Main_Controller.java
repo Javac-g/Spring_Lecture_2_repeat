@@ -1,8 +1,5 @@
 package spring_lection_2.Controllers;
 
-
-
-
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
