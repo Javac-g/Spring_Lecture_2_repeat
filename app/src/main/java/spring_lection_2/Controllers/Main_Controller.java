@@ -17,7 +17,7 @@ import spring_lection_2.Model.ResponseDTO;
 import spring_lection_2.Services.MainService;
 
 
-@RequestMapping("/main_controller")
+@RequestMapping("/main_contr")
 public class Main_Controller {
     
     @Autowired
